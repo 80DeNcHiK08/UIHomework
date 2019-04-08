@@ -1,9 +1,13 @@
-@import "./root";
-
 $theme-colors : (
-	"apr-one":"rgb(213,99,42)",
-	"apr-two":"rgb(5,104,57)"
+	"bgc-1":rgb(213,99,42),
+	"bgc-2":rgb(5,104,57),
+	"bgc-2-tr":rgba(5,104,57,0.7),
+	"txt-1":#000,
+	"txt-2":#fff
 );
+
+//$theme-colors: map-remove($theme-colors, "bgc-2-tr");
+//$theme-colors: ("bgc-2-tr":rgba(213,99,42,0.5));
 
 body, html {
 	margin: 0;
@@ -11,12 +15,12 @@ body, html {
 
 	a {
 		text-decoration: none;
-		color: var(--txt_l);
+		color: map-get($map: $theme-colors, $key: "txt-2");
 	}
 
 	a:hover {
 		text-decoration: none;
-		color: var(--txt_d);
+		color: map-get($map: $theme-colors, $key: "txt-1");
 	}
 
 	li {
@@ -29,7 +33,7 @@ body, html {
 }
 
 .header {
-	background-color: rgba(5,104,57,0.5);
+	background-color: map-get($map: $theme-colors, $key: "bgc-2-tr");
 	padding: 15px 40px;
 	display: grid;
 	grid-template-columns: auto auto;
@@ -42,7 +46,7 @@ body, html {
 
 	.logo {
 		font-size: 1.8em;
-		color: var(--txt_l);
+		color: map-get($map: $theme-colors, $key: "txt-2");
 	}
 
 	.mmenu {
@@ -75,7 +79,7 @@ body, html {
 			left: 0;
 			right: 0;
 			bottom: 0;
-			background-color: var(--apr_one);
+			background-color: map-get($map: $theme-colors, $key: "bgc-1");
 			transition: .4s;
 		}
 
@@ -86,22 +90,22 @@ body, html {
 			width: 15px;
 			left: 5px;
 			top: 5px;
-			background-color: var(--apr_two);
+			background-color: map-get($map: $theme-colors, $key: "bgc-2");
 			-webkit-transition: .4s;
 			transition: .4s;
 		}
 		  
 		input:checked + .slider {
-			background-color: var(--apr_two);
+			background-color: map-get($map: $theme-colors, $key: "bgc-2");
 		}
 		  
 		input:focus + .slider {
-			box-shadow: 0 0 1px var(--apr_two);
+			box-shadow: 0 0 1px map-get($map: $theme-colors, $key: "bgc-2");
 		}
 		  
 		input:checked + .slider:before {
 			transform: translateX(20px);
-			background-color: var(--apr_one);
+			background-color: map-get($map: $theme-colors, $key: "bgc-1");
 		}
 
 		.slider.round {
@@ -112,11 +116,9 @@ body, html {
 			border-radius: 50%;
 		}
 
-		input:checked {
-			$root : (
-				"--apr_one": "rgb(5,104,57)",
-				"--apr_two": "rgb(213,99,42)"
-			);
+		input:checked{
+			//$theme-colors: map-remove($theme-colors, "bgc-2-tr");
+			$theme-colors: ("bgc-2-tr":rgba(213,99,42,0.5));
 		}
 		  
 		  
@@ -161,7 +163,7 @@ body, html {
 	}
 
 	.d-block {
-		background-color: var(--apr_one);
+		background-color: map-get($map: $theme-colors, $key: "bgc-1");
 		color: #fff;
 	}
 }

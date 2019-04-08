@@ -4,24 +4,25 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="../../wwwroot/lib/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../../wwwroot/css/site.css">
+	<link rel="stylesheet" href="./wwwroot/lib/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./wwwroot/css/site.css">
 	<title>Document</title>
 </head>
-<body>
-	<div class="header">
+<body data-spy="scroll" data-target="#mmenu" data-offset=0>
+	<a name="#top"></a>
+	
+	<input type="checkbox" id="themeswapper">
+	<label class="switch" for="themeswapper">
+		<span class="slider round"></span>
+	</label>
+	<div class="header theme-1">
 		<a href="" class="logo">Logo</a>
-		<nav class="mmenu">
-			<li><a href="">Home</a></li>
-			<li><a href="">Features</a></li>
-			<li><a href="">News</a></li>
-			<li><a href="">Pre-Order</a></li>
-			<li><a href="">Search</a></li>
-			<label class="switch">
-				<input type="checkbox">
-				<span class="slider round"></span>
-			</label>
-		</nav>
+		<ul class="nav nav-pills" id="mmenu">
+			<li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+			<li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+			<li class="nav-item"><a class="nav-link" href="#preorder">Pre-Order</a></li>
+			<li class="nav-item"><a class="nav-link disable" href="#">Search</a></li>
+		</ul>
 	</div>
 
 	<div class="main">
@@ -33,13 +34,13 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img class="d-block w-100" src="../../wwwroot/images/1.jpg" alt="">
+					<img class="d-block w-100" src="./wwwroot/images/1.jpg" alt="">
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="../../wwwroot/images/2.jpg" alt="">
+					<img class="d-block w-100" src="./wwwroot/images/2.jpg" alt="">
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="../../wwwroot/images/3.jpg" alt="">
+					<img class="d-block w-100" src="./wwwroot/images/3.jpg" alt="">
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
@@ -53,35 +54,62 @@
 		</div>
 
 		<div class="wrapper">
-			<div class="block l-block">
+			<div class="block l-block" id="features">
 				<h3 class="caption">Features</h3>
+				<p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa velit nemo officia dolor itaque aperiam maiores sapiente tempora eos eveniet, dolorem excepturi repellat necessitatibus deserunt dicta qui nam doloribus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsam placeat autem ullam at sed veritatis. Doloribus, incidunt rem officia reiciendis, id sint non eos, natus ipsa mollitia qui veritatis?</p>
+				<img src="./wwwroot/images/5.jpg" alt="" class="img">
 				<p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa velit nemo officia dolor itaque aperiam maiores sapiente tempora eos eveniet, dolorem excepturi repellat necessitatibus deserunt dicta qui nam doloribus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsam placeat autem ullam at sed veritatis. Doloribus, incidunt rem officia reiciendis, id sint non eos, natus ipsa mollitia qui veritatis?</p>
 			</div>
 			
-			<div class="block d-block">
+			<div class="block d-block theme-2" id="news">
 				<h3 class="caption">News</h3>
-				<p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit numquam expedita soluta quia fugit eos exercitationem corrupti odit, ut nihil voluptas sapiente voluptates perspiciatis rem esse iste facilis accusamus officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae sed explicabo dignissimos labore perspiciatis odio asperiores placeat architecto repellat, adipisci, et exercitationem reprehenderit omnis quis unde tenetur! Asperiores, libero est.</p>
+				<p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit numquam expedita soluta quia fugit eos exercitationem corrupti odit, ut nihil voluptas sapiente voluptates perspiciatis rem esse iste facilis accusamus officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae sed explicabo dignissimos labore perspiciatis odio asperiores placeat architecto repellat, adipisci, et exercitationem reprehenderit omnis quis unde tenetur! Asperiores, libero est. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit numquam expedita soluta quia fugit eos exercitationem corrupti odit, ut nihil voluptas sapiente voluptates perspiciatis rem esse iste facilis accusamus officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae sed explicabo dignissimos labore perspiciatis odio asperiores placeat architecto repellat, adipisci, et exercitationem reprehenderit omnis quis unde tenetur! Asperiores, libero est.
+				<img src="./wwwroot/images/4.jpg" alt="" class="img left">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit numquam expedita soluta quia fugit eos exercitationem corrupti odit, ut nihil voluptas sapiente voluptates perspiciatis rem esse iste facilis accusamus officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae sed explicabo dignissimos labore perspiciatis odio asperiores placeat architecto repellat, adipisci, et exercitationem reprehenderit omnis quis unde tenetur! Asperiores, libero est. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit numquam expedita soluta quia fugit eos exercitationem corrupti odit, ut nihil voluptas sapiente voluptates perspiciatis rem esse iste facilis accusamus officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae sed explicabo dignissimos labore perspiciatis odio asperiores placeat architecto repellat, adipisci, et exercitationem reprehenderit omnis quis unde tenetur! Asperiores, libero est.
+				<img src="./wwwroot/images/6.jpg" alt="" class="img right">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit numquam expedita soluta quia fugit eos exercitationem corrupti odit, ut nihil voluptas sapiente voluptates perspiciatis rem esse iste facilis accusamus officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae sed explicabo dignissimos labore perspiciatis odio asperiores placeat architecto repellat, adipisci, et exercitationem reprehenderit omnis quis unde tenetur! Asperiores, libero est. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit numquam expedita soluta quia fugit eos exercitationem corrupti odit, ut nihil voluptas sapiente voluptates perspiciatis rem esse iste facilis accusamus officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae sed explicabo dignissimos labore perspiciatis odio asperiores placeat architecto repellat, adipisci, et exercitationem reprehenderit omnis quis unde tenetur! Asperiores, libero est. </p>
 			</div>
 			
-			<div class="block l-block">
+			<div class="block l-block" id="preorder">
 				<h3 class="caption">Make a pre-order</h3>
-				
+				<form>
+						<div class="formlabel">
+							<h3>Registration</h3>
+						</div>
+						<div class="form-group-handler">
+							<div class="form-group">
+								<input placeholder=" " required pattern="[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,3}$" type="text" name="Email" />
+								<label for="Email">Email</label>
+							</div>
+							<div class="form-group">
+								<input placeholder=" " required type="text" name="adress" />
+								<label for="adress">Adress</label>
+							</div>
+							<div class="form-group">
+								<input placeholder=" " required pattern="+(0-9){12}" type="text" name="phone" />
+								<label for="phone">Phone number</label>
+							</div>
+							<div class="form-group">
+								<input type="submit" value="Make an order" />
+							</div>
+						</div>
+				</form>
 			</div>
 			
-			<div class="block l-block">
+			<div class="block l-block" id="search">
 				<h3 class="caption">Our stores</h3>
-				
+				<img src="./wwwroot/images/1.PNG" alt="" class="img">
 			</div>
 		</div>
 	</div>
-	<div class="footer">
+	<div class="footer theme-1">
 		<div class="wrapper">
-			<a href="" class="totop"></a>
-			<p class="copyright"></p>
+		<a href="#top" class="totop">To top</a>
+		<p class="copy">Copyrights &copyMiroshnichenko Denis, 2019</p>
 		</div>
 	</div>
 </body>
-	<script src="../../wwwroot/lib/jquery/dist/jquery-3.3.1.min.js"></script>
-	<script src="../../wwwroot/lib/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-	<script src="../../wwwroot/js/site.js"></script>
+	<script src="./wwwroot/lib/jquery/dist/jquery-3.3.1.min.js"></script>
+	<script src="./wwwroot/lib/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+	<script src="./wwwroot/js/site.js"></script>
 </html>

@@ -1,0 +1,173 @@
+:root {
+  --apr_one: rgb(213,99,42);
+  --apr_two: rgb(5,104,57);
+  --apr_blue: rgb(37,147,196);
+  --txt_d: #000;
+  --txt_l: #fff;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body a, html a {
+  text-decoration: none;
+  color: var(--txt_l);
+}
+
+body a:hover, html a:hover {
+  text-decoration: none;
+  color: var(--txt_d);
+}
+
+body li, html li {
+  list-style-type: none;
+}
+
+body .invisible, html .invisible {
+  visibility: hidden;
+}
+
+.header {
+  background-color: rgba(5, 104, 57, 0.5);
+  padding: 15px 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+.header .logo {
+  font-size: 1.8em;
+  color: var(--txt_l);
+}
+
+.header .mmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .mmenu li, .header .mmenu label {
+  padding: 8px 13px;
+}
+
+.header .mmenu .switch {
+  position: relative;
+  width: 45px;
+  height: 25px;
+  top: 5px;
+}
+
+.header .mmenu .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.header .mmenu .slider {
+  position: absolute;
+  cursor: pointer;
+  width: 45px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--apr_one);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.header .mmenu .slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 5px;
+  top: 5px;
+  background-color: var(--apr_two);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.header .mmenu input:checked + .slider {
+  background-color: var(--apr_two);
+}
+
+.header .mmenu input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px var(--apr_two);
+          box-shadow: 0 0 1px var(--apr_two);
+}
+
+.header .mmenu input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+  background-color: var(--apr_one);
+}
+
+.header .mmenu .slider.round {
+  border-radius: 34px;
+}
+
+.header .mmenu .slider.round:before {
+  border-radius: 50%;
+}
+
+.main .carousel {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.main .block {
+  padding: 30px 0 50px 0;
+}
+
+.main .block .caption {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  text-align: center;
+  letter-spacing: 5px;
+  margin: 30px 0;
+}
+
+.main .block .caption::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  background-color: #ccc;
+  width: 30%;
+  bottom: -15px;
+  left: 35%;
+}
+
+.main .block .text {
+  text-align: center;
+  width: 60%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.main .d-block {
+  background-color: var(--apr_one);
+  color: #fff;
+}
+/*# sourceMappingURL=site.css.map */

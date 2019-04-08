@@ -1,0 +1,167 @@
+@import "./root";
+
+$theme-colors : (
+	"apr-one":"rgb(213,99,42)",
+	"apr-two":"rgb(5,104,57)"
+);
+
+body, html {
+	margin: 0;
+	padding: 0;
+
+	a {
+		text-decoration: none;
+		color: var(--txt_l);
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: var(--txt_d);
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	.invisible {
+		visibility: hidden;
+	}
+}
+
+.header {
+	background-color: rgba(5,104,57,0.5);
+	padding: 15px 40px;
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	left: 0; top: 0;
+	z-index: 2;
+	width: 100%;
+
+	.logo {
+		font-size: 1.8em;
+		color: var(--txt_l);
+	}
+
+	.mmenu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		li, label {
+			padding: 8px 13px;
+		}
+
+		.switch {
+			position: relative;
+			width: 45px;
+			height: 25px;
+			top: 5px;
+		}
+
+		.switch input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
+		.slider {
+			position: absolute;
+			cursor: pointer;
+			width: 45px;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: var(--apr_one);
+			transition: .4s;
+		}
+
+		.slider:before {
+			position: absolute;
+			content: "";
+			height: 15px;
+			width: 15px;
+			left: 5px;
+			top: 5px;
+			background-color: var(--apr_two);
+			-webkit-transition: .4s;
+			transition: .4s;
+		}
+		  
+		input:checked + .slider {
+			background-color: var(--apr_two);
+		}
+		  
+		input:focus + .slider {
+			box-shadow: 0 0 1px var(--apr_two);
+		}
+		  
+		input:checked + .slider:before {
+			transform: translateX(20px);
+			background-color: var(--apr_one);
+		}
+
+		.slider.round {
+			border-radius: 34px;
+		}
+		  
+		.slider.round:before {
+			border-radius: 50%;
+		}
+
+		input:checked {
+			$root : (
+				"--apr_one": "rgb(5,104,57)",
+				"--apr_two": "rgb(213,99,42)"
+			);
+		}
+		  
+		  
+	}
+}
+
+.main {
+	.carousel {
+        max-height: 100vh;
+		overflow: hidden;
+	}
+	
+	.block {
+		padding: 30px 0 50px 0;
+
+		.caption {
+			position: relative;
+			text-transform: uppercase;
+			font-size: 1.5em;
+			text-align: center;
+			letter-spacing: 5px;
+			margin: 30px 0;
+		}
+
+		.caption::before {
+			position: absolute;
+			content: "";
+			height: 3px;
+			background-color: #ccc;
+			width: 30%;
+			bottom: -15px;
+			left: 35%;
+			//PREPOD_HUI.NE ZASTAVLAY DINISA PLAKAT'!!!!!!!#PREPHUI
+		}
+
+		.text {
+			text-align: center;
+			width: 60%;
+			max-width: 700px;
+			margin:  0 auto;
+		}
+	}
+
+	.d-block {
+		background-color: var(--apr_one);
+		color: #fff;
+	}
+}

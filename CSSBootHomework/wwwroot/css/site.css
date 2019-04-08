@@ -208,6 +208,31 @@ input:checked ~ .main .theme-2 {
   margin: 10px auto;
 }
 
+.main .block table {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.main .block table td {
+  border: 1px solid #000;
+  padding: 8px 15px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.main .block table td:hover {
+  background-color: #ccc;
+}
+
+.main .block table th {
+  padding-bottom: 15px;
+}
+
+.main .block table .price {
+  text-align: right;
+}
+
 .main #news .text {
   text-align: justify;
 }
@@ -222,7 +247,7 @@ input:checked ~ .main .theme-2 {
   float: right;
 }
 
-.main #search img {
+.main #map img {
   min-width: 700px;
 }
 

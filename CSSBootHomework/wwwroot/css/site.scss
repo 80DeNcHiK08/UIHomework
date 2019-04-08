@@ -190,6 +190,27 @@ input:checked ~ .main .theme-2 {
 			max-width: 350px;
 			margin: 10px auto;
 		}
+
+		table {
+			width: 80%;
+			margin: 20px auto;
+			td {
+				border: 1px solid #000;
+				padding: 8px 15px;
+				transition: 0.2s;
+				cursor: pointer;
+			}
+			td:hover {
+				background-color: #ccc;
+			}
+			th {
+				padding-bottom: 15px;
+			}
+
+			.price {
+				text-align: right;
+			}
+		}
 	}
 
 	#news {
@@ -208,7 +229,7 @@ input:checked ~ .main .theme-2 {
 		}
 	}
 
-	#search {
+	#map {
 		img {
 			min-width: 700px;
 		}
